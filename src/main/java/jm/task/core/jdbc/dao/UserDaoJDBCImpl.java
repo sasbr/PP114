@@ -23,7 +23,7 @@ public class UserDaoJDBCImpl implements UserDao {
     public void dropUsersTable() {
         try (Connection conn = Util.connect();
              Statement statement = conn.createStatement()) {
-            statement.executeUpdate("DROP TABLE users");
+            statement.executeUpdate("DROP TABLE if exists users");
         } catch (SQLException e) {
             System.out.println("SQL error occured 2");
         }

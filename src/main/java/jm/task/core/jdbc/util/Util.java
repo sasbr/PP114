@@ -4,7 +4,7 @@ import java.sql.*;
 
 public class Util {
 // реализуйте настройку соеденения с БД
-    private static final String URL = "jdbc:mysql://localhost:3306/mysql?allowPublicKeyRetrieval=true&useSSL=false";
+    private static final String URL = "jdbc:mysql://localhost:3306/mydata?allowPublicKeyRetrieval=true&useSSL=false";
     private static final String DB_ADMIN = "root";
     private static final String PASSWORD = "root";
     private static  final String DRIVER = "com.mysql.cj.jdbc.Driver";
