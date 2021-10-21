@@ -12,8 +12,8 @@ public class Main {
         serviceObject.saveUser("Victor", "Sergeev", (byte)42);
         serviceObject.saveUser("Sergei", "Victorov", (byte)15);
         System.out.println(serviceObject.getAllUsers());
-        //serviceObject.cleanUsersTable();
-        //serviceObject.dropUsersTable();
+        serviceObject.cleanUsersTable();
+        serviceObject.dropUsersTable();
 
 
     }
