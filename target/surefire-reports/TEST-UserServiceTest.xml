@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="6" failures="0" name="UserServiceTest" time="0.458" errors="0" skipped="0">
+<testsuite tests="6" failures="0" name="UserServiceTest" time="0.434" errors="0" skipped="0">
   <properties>
     <property name="idea.version" value="2021.2.1"/>
     <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
     <property name="java.vm.version" value="16.0.2+7-67"/>
     <property name="sun.boot.library.path" value="C:\Users\79375\.jdks\openjdk-16.0.2\bin"/>
-    <property name="maven.multiModuleProjectDirectory" value="C:\Users\79375\IdeaProjects\CoreTaskTemplate1"/>
+    <property name="maven.multiModuleProjectDirectory" value="C:\Users\79375\IdeaProjects\CoreTaskTemplateHiber"/>
     <property name="java.vm.vendor" value="Oracle Corporation"/>
     <property name="java.vendor.url" value="https://java.oracle.com/"/>
     <property name="guice.disable.misplaced.annotation.check" value="true"/>
@@ -16,7 +16,7 @@
     <property name="user.country" value="RU"/>
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\79375\IdeaProjects\CoreTaskTemplate1"/>
+    <property name="user.dir" value="C:\Users\79375\IdeaProjects\CoreTaskTemplateHiber"/>
     <property name="java.vm.compressedOopsMode" value="Zero based"/>
     <property name="java.runtime.version" value="16.0.2+7-67"/>
     <property name="os.arch" value="amd64"/>
@@ -44,7 +44,7 @@
     <property name="java.class.path" value="C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\plugins\maven\lib\maven3\boot\plexus-classworlds-2.6.0.jar;C:\Program Files\JetBrains\IntelliJ IDEA 2021.2.1\plugins\maven\lib\maven3\boot\plexus-classworlds.license"/>
     <property name="java.vm.specification.version" value="16"/>
     <property name="sun.arch.data.model" value="64"/>
-    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.2.1 install"/>
+    <property name="sun.java.command" value="org.codehaus.classworlds.Launcher -Didea.version=2021.2.1 verify"/>
     <property name="java.home" value="C:\Users\79375\.jdks\openjdk-16.0.2"/>
     <property name="user.language" value="ru"/>
     <property name="java.specification.vendor" value="Oracle Corporation"/>
@@ -59,10 +59,10 @@
     <property name="sun.cpu.endian" value="little"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="UserServiceTest" name="saveUser" time="0.267"/>
-  <testcase classname="UserServiceTest" name="removeUserById" time="0.051"/>
-  <testcase classname="UserServiceTest" name="getAllUsers" time="0.034"/>
-  <testcase classname="UserServiceTest" name="dropUsersTable" time="0.031"/>
-  <testcase classname="UserServiceTest" name="createUsersTable" time="0.019"/>
-  <testcase classname="UserServiceTest" name="cleanUsersTable" time="0.056"/>
+  <testcase classname="UserServiceTest" name="saveUser" time="0.18"/>
+  <testcase classname="UserServiceTest" name="removeUserById" time="0.069"/>
+  <testcase classname="UserServiceTest" name="getAllUsers" time="0.062"/>
+  <testcase classname="UserServiceTest" name="dropUsersTable" time="0.042"/>
+  <testcase classname="UserServiceTest" name="createUsersTable" time="0.013"/>
+  <testcase classname="UserServiceTest" name="cleanUsersTable" time="0.068"/>
 </testsuite>

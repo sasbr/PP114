@@ -12,7 +12,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
     @Override
     public void createUsersTable() {
-        try (Connection conn = Util.connect();
+        try (Connection conn = Util.getConnection();
              Statement stmt = conn.createStatement()) {
             stmt.executeUpdate("CREATE TABLE users (id INTEGER NOT NULL AUTO_INCREMENT, name VARCHAR(45), lastname VARCHAR(45), age TINYINT(3), PRIMARY KEY (id))");
         } catch (SQLException e) {
@@ -21,7 +21,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
     @Override
     public void dropUsersTable() {
-        try (Connection conn = Util.connect();
+        try (Connection conn = Util.getConnection();
              Statement statement = conn.createStatement()) {
             statement.executeUpdate("DROP TABLE if exists users");
         } catch (SQLException e) {
@@ -30,7 +30,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
     @Override
     public void saveUser(String name, String lastName, byte age) {
-        try ( Connection conn = Util.connect();
+        try ( Connection conn = Util.getConnection();
               PreparedStatement preStmt = conn.prepareStatement("INSERT INTO users VALUES (default, ?, ?, ?)")) {
             preStmt.setString(1, name);
             preStmt.setString(2, lastName);
@@ -43,7 +43,7 @@ public class UserDaoJDBCImpl implements UserDao {
     }
     @Override
     public void removeUserById(long id) {
-        try (Connection conn = Util.connect();
+        try (Connection conn = Util.getConnection();
              PreparedStatement preStmt = conn.prepareStatement("DELETE FROM users WHERE id = ?")){
             preStmt.setLong(1, id);
             preStmt.execute();
@@ -54,7 +54,7 @@ public class UserDaoJDBCImpl implements UserDao {
     @Override
     public List<User> getAllUsers() {
         List<User> userList = new ArrayList<>();
-        try(Connection conn = Util.connect();
+        try(Connection conn = Util.getConnection();
             Statement statement = conn.createStatement()) {
             ResultSet resultSet = statement.executeQuery("SELECT * FROM users");
             while(resultSet.next()) {
@@ -66,7 +66,7 @@ public class UserDaoJDBCImpl implements UserDao {
         return userList;
     }
     public void cleanUsersTable() {
-        try (Connection conn = Util.connect();
+        try (Connection conn = Util.getConnection();
              Statement statement = conn.createStatement()) {
             statement.executeUpdate("DELETE FROM users");
         } catch (SQLException e) {
