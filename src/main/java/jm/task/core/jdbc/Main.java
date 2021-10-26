@@ -24,5 +24,6 @@ public class Main {
         userService.dropUsersTable();
         Util.shutdown();
 
+
     }
 }
