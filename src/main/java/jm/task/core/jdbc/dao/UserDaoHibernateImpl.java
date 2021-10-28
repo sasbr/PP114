@@ -22,8 +22,8 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
         try {
-            session.createSQLQuery("create table IF NOT EXISTS userstabl" +
-                    "(id BIGINT primary key auto_increment, " +
+            session.createSQLQuery("create table if not exists userstabl" +
+                    "(id bigint primary key auto_increment, " +
                     "name varchar(100), " +
                     "lastname varchar(100), " +
                     "age tinyint);").executeUpdate();
@@ -40,7 +40,7 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
         try {
-            session.createSQLQuery("drop table IF EXISTS userstabl;").executeUpdate();
+            session.createSQLQuery("drop table if exists userstabl;").executeUpdate();
             tx1.commit();
         } catch (HibernateException e) {
             tx1.rollback();
@@ -85,7 +85,7 @@ public class UserDaoHibernateImpl implements UserDao {
         Transaction tx1 = session.beginTransaction();
         List<User> users = new ArrayList<>();
         try {
-            users = session.createQuery("FROM User ").list();
+            users = session.createQuery("from User ").list();
             tx1.commit();
         } catch (HibernateException e) {
             tx1.rollback();
@@ -101,7 +101,7 @@ public class UserDaoHibernateImpl implements UserDao {
         Session session = sessionFactory.openSession();
         Transaction tx1 = session.beginTransaction();
         try {
-            session.createSQLQuery("truncate TABLE userstabl;").executeUpdate();
+            session.createSQLQuery("truncate table userstabl;").executeUpdate();
             tx1.commit();
         } catch (HibernateException e) {
             tx1.rollback();
